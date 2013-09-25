@@ -12,6 +12,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<scm>
+		<url>http://github.com/rpolanco/compta-on-line</url>
+		<developerConnection>scm:git:[fetch=]https://github.com/rpolanco/compta-on-line.git[push=]ssh://git@github.com:rpolanco/compta-on-line.git</developerConnection>
+	</scm>
+
 	<repositories>
 		<repository>
 			<id>java.net2</id>
@@ -61,6 +66,14 @@
 
 	<build>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
